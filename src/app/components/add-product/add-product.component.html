@@ -1,0 +1,40 @@
+<form  class=" col-4 m-5 shadow-md p-3 bg-info rounded mx-auto">
+
+  <div class="input-group my-3">
+      <label for="name" class="input-group-text bi bi-cart px-4 bg-dark text-info"> </label>
+      <input id="name" type="text" class="form-control " placeholder="Product Name" [(ngModel)]="productName"
+          name="productName">
+  </div>
+
+  <div class="input-group my-3">
+      <label for="price" class="input-group-text bi bi-currency-dollar px-4 bg-dark text-info"></label>
+      <input id="price" type="number" class="form-control" placeholder="Price" [(ngModel)]="productPrice" name="productPrice">
+  </div>
+  <div class="input-group my-3">
+      <label for="des" class="input-group-text bi bi-file-earmark-text px-4 bg-dark text-info"></label>
+      <input id="des" type="text" class="form-control" placeholder="Description" [(ngModel)]="productDescription"
+          name="productDescription">
+  </div>
+  <div class="input-group my-3">
+      <label for="img" class="input-group-text bi bi-image px-4 bg-dark text-info"></label>
+      <input id="img" type="text" class="form-control" placeholder="Image" [(ngModel)]="productImage" name="productImage">
+  </div>
+  <div class="input-group my-3">
+      <label for="cat" class="input-group-text bi bi-tags px-4  bg-dark text-info"></label>
+      <input type="text" id="cat" class="form-control" placeholder="Category" [(ngModel)]="productCategory"
+          name="productCategory">
+  </div>
+  <div class="input-group mb-3">
+      <label class="input-group-text bi bi-star px-4 bg-dark text-info " for="select" ></label>
+      <select class="form-select" id="select" [(ngModel)]="productRating" name="rating" placeholder="Rating">  
+        <option selected value="5">Five</option>
+        <option value="4">Four</option>
+        <option value="3">Three</option>
+        <option value="2">Two</option>
+        <option value="1">one</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-dark btn-lg w-100 mt-3 py-2  rounded-pill " (click)="addProduct()">
+      <i class="bi bi-save me-2"></i> Save Product
+    </button>
+</form> 
